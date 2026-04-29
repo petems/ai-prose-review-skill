@@ -1,0 +1,13 @@
+{
+  "name": "ai-prose-review",
+  "owner": {
+    "name": "Peter Souter"
+  },
+  "plugins": [
+    {
+      "name": "petems-prose",
+      "source": "./",
+      "description": "Review markdown prose against 21 writing rules from agent-style."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "petems-prose",
+  "description": "Review markdown prose against the 21 writing rules from agent-style.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Peter Souter"
+  },
+  "license": "MIT"
+}

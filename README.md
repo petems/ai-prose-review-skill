@@ -6,13 +6,36 @@ This is my simpler personal version of [yzhao062/agent-style](https://github.com
 
 ## Install
 
-Symlink the repo into your Claude Code skills directory:
+Three install paths, recommended order:
 
-```bash
-ln -s "$(pwd)" ~/.claude/skills/ai-prose-review
+### 1. Claude Code plugin
+
+```
+/plugin marketplace add petems/ai-prose-review-skill
+/plugin install petems-prose@ai-prose-review
 ```
 
-Then in any Claude Code session:
+Invoke as `/petems-prose:ai-prose-review`.
+
+### 2. vercel-labs/skills CLI
+
+```bash
+npx skills add petems/ai-prose-review-skill
+```
+
+Invoke as `/ai-prose-review`.
+
+### 3. Manual symlink
+
+For hacking on the skill locally:
+
+```bash
+ln -s "$(pwd)/skills/ai-prose-review" ~/.claude/skills/ai-prose-review
+```
+
+Invoke as `/ai-prose-review`.
+
+## Usage
 
 ```
 /ai-prose-review                       # review all *.md / *.mdx in cwd

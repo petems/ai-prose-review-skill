@@ -1,0 +1,37 @@
+{
+  "skill_name": "ai-prose-review",
+  "evals": [
+    {
+      "id": 0,
+      "name": "heavy-ai-tells",
+      "prompt": "Can you do a prose review on this README? It feels a bit AI-generated and I want to clean it up before I publish. The file is at fixtures/heavy-ai-tells/README.md.",
+      "expected_output": "A violation report flagging at minimum: RULE-12 (long sentences), RULE-02 (passive voice), RULE-D (Furthermore overuse), RULE-B (em-dash filler), RULE-H (unsupported 'studies show' claim), RULE-F (DataFlow Pro / DFP / Data-Flow-Pro inconsistency), RULE-G (mixed heading case), RULE-I (contractions), RULE-04 (needless words), RULE-05 (cliches), RULE-A (over-bulleting). Skill should ask before editing.",
+      "files": ["fixtures/heavy-ai-tells/README.md"],
+      "assertions": []
+    },
+    {
+      "id": 1,
+      "name": "clean-prose",
+      "prompt": "audit this doc for AI tells please: fixtures/clean-prose/docs.md",
+      "expected_output": "Skill produces a clean-or-near-clean report. Should NOT hallucinate violations. Zero High-severity issues; at most a handful of Low-severity stylistic notes acceptable.",
+      "files": ["fixtures/clean-prose/docs.md"],
+      "assertions": []
+    },
+    {
+      "id": 2,
+      "name": "multi-file-repo-scan",
+      "prompt": "/ai-prose-review",
+      "expected_output": "Skill globs *.md/*.mdx in cwd, scans README.md and docs/architecture.md, EXCLUDES node_modules/should-skip.md from the report, groups violations by file, flags issues in both included files (Furthermore-streak in README, em-dash filler and run-on sentences in architecture.md).",
+      "files": ["fixtures/multi-file-repo/README.md", "fixtures/multi-file-repo/docs/architecture.md", "fixtures/multi-file-repo/node_modules/should-skip.md"],
+      "assertions": []
+    },
+    {
+      "id": 3,
+      "name": "out-of-scope-fiction",
+      "prompt": "review this story draft for AI tells: fixtures/out-of-scope/story-draft.md",
+      "expected_output": "Skill recognises the file as fiction (not technical prose) and pauses to confirm with the user before reviewing, per the 'What not to flag' guidance. Should not produce a violation report unprompted.",
+      "files": ["fixtures/out-of-scope/story-draft.md"],
+      "assertions": []
+    }
+  ]
+}

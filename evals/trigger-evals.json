@@ -1,0 +1,82 @@
+[
+  {
+    "query": "I just wrote a 1500-word blog post about my k8s migration nightmare and I want to publish tomorrow but it feels weirdly chatgpt-flavoured in places, can you do a pass on it? draft is in ~/blog/posts/k8s-migration.md",
+    "should_trigger": true
+  },
+  {
+    "query": "before I open this PR can you run the agent-style rules thing on the README I added? bit worried it sounds AI-generated",
+    "should_trigger": true
+  },
+  {
+    "query": "/ai-prose-review docs/architecture.md",
+    "should_trigger": true
+  },
+  {
+    "query": "audit my new design doc for prose quality, it's in design/observability-overhaul.md — i want to catch any 'leverages cutting-edge' style filler before the principal engineers see it",
+    "should_trigger": true
+  },
+  {
+    "query": "review the markdown files in /docs for AI tells, especially the runbooks",
+    "should_trigger": true
+  },
+  {
+    "query": "hey can u check this readme for me, I've been using copilot to draft stuff and I want to make sure it doesn't read like a robot wrote it",
+    "should_trigger": true
+  },
+  {
+    "query": "/ai-prose-review",
+    "should_trigger": true
+  },
+  {
+    "query": "going through old docs and they all open with 'Furthermore' or 'Moreover' or have those 47-word passive sentences. Can you do a sweep across docs/*.md and tell me what to fix?",
+    "should_trigger": true
+  },
+  {
+    "query": "do a prose review on this — looking for unsupported claims, repeated openers, that 'studies show...' kind of thing. file is api-reference.md",
+    "should_trigger": true
+  },
+  {
+    "query": "audit my technical writing in this repo for AI smell",
+    "should_trigger": true
+  },
+  {
+    "query": "review this PR for me — github.com/petems/widget-svc/pull/42, there's a function in handler.go that I'm not sure about, also the new test file feels overengineered",
+    "should_trigger": false
+  },
+  {
+    "query": "can you check my python script for bugs? it's at /Users/peter.souter/scripts/sync_data.py — it keeps timing out on large inputs and i can't figure out why",
+    "should_trigger": false
+  },
+  {
+    "query": "i need a security review of the auth flow before we ship — token handling is in middleware.ts and the JWT verification looks suspicious to me",
+    "should_trigger": false
+  },
+  {
+    "query": "summarise this 8000-word incident postmortem for me, I just need the key takeaways and follow-up actions, file is incidents/2026-q1-outage.md",
+    "should_trigger": false
+  },
+  {
+    "query": "spell-check the README and fix any typos, I always mix up 'definately' and 'definitely'",
+    "should_trigger": false
+  },
+  {
+    "query": "rewrite my marketing landing page copy to be more punchy — the one in marketing/landing.md, it's too dry and corporate-sounding right now",
+    "should_trigger": false
+  },
+  {
+    "query": "translate docs/getting-started.md to Japanese for our localisation pass",
+    "should_trigger": false
+  },
+  {
+    "query": "draft a README for the new auth service we're building, here's the spec doc with all the endpoints",
+    "should_trigger": false
+  },
+  {
+    "query": "convert the architecture diagrams in docs/ from mermaid to plantuml — apparently confluence renders plantuml better",
+    "should_trigger": false
+  },
+  {
+    "query": "edit my short story draft, the lighthouse one, for pacing and tension — it's at fiction/lighthouse.md and the second act drags",
+    "should_trigger": false
+  }
+]

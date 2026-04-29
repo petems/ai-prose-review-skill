@@ -1,0 +1,5 @@
+.claude/
+
+# The exclusion test fixture lives inside node_modules deliberately.
+!evals/fixtures/multi-file-repo/node_modules/
+!evals/fixtures/multi-file-repo/node_modules/**
